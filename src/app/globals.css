@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-ink-950 text-paper font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    @apply font-mono;
+  }
+  :focus-visible {
+    outline: 2px solid #F2B705;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .ledger-card {
+    @apply bg-ink-900 border border-ink-700 rounded-md shadow-card;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-amber text-ink-950 font-semibold px-5 py-2.5 hover:bg-amber-soft transition-colors;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-ink-600 text-paper font-medium px-5 py-2.5 hover:border-amber hover:text-amber transition-colors;
+  }
+  .input-field {
+    @apply w-full bg-ink-900 border border-ink-600 rounded-md px-4 py-3 text-paper placeholder:text-ink-600 focus:border-amber outline-none transition-colors;
+  }
+  .label {
+    @apply text-xs uppercase tracking-wider text-paper/50 font-mono;
+  }
+}
